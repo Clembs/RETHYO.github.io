@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: rebeccapurple;
+      }
+
+      h1 {
+        font-size: 10rem;
+        font-weight: bolder;
+        text-shadow: 3px 3px 10px black;
+        color: yellow;
+      }
+
+      p {
+        color: whitesmoke;
+      }
+
+      button,
+      a {
+        border: none;
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        background: yellow;
+        color: rebeccapurple;
+        font-family: inherit;
+      }
+
+      video {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <video
+      class="siphano"
+      controls
+      src="https://m.clembs.com/siphano.mp4"
+    ></video>
+
+    <h1>rey théo</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+      dolor excepturi, eaque hic eum tempore perspiciatis expedita
+      exercitationem ratione accusamus, quia recusandae voluptate minima?
+      Tempore quae consectetur aut est aperiam. At vel aperiam mollitia deserunt
+      quis sapiente iusto fugiat repudiandae eius tenetur excepturi eligendi
+      molestiae esse explicabo perferendis, in beatae tempora maiores, amet sunt
+      aliquid a dicta. Saepe, repellendus harum!
+    </p>
+
+    <button onclick="giveMoney()" class="hi">donnez moi de la moulaga</button>
+
+    <p class="money">$0</p>
+
+    <a href="https://onlyfans.com/clembs">mes cams 😋</a>
+
+    <script>
+      const button = document.querySelector('button');
+      const siphano = document.querySelector('.siphano');
+
+      function giveMoney() {
+        const money = document.querySelector('.money');
+        const moneyValue = Number(money.innerHTML.replace('$', ''));
+        money.innerHTML = `$${moneyValue + 2000}`;
+
+        siphano.play().then(() => {
+          setTimeout(() => {
+            siphano.pause();
+            siphano.currentTime = 0;
+          }, 3500);
+        });
+      }
+    </script>
+  </body>
+</html>
