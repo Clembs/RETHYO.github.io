@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #0c0c0d;
+}
+
+main {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-site-header {
+  width: 30%;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #01ff12;
+}
+
+a {
+  color: #01ff12;
+}
+
+p {
+  color: #ffeaf2;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.5rem;
+}
+
+.project img,
+video {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.project {
+  transition: transform 0.1s linear;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s linear;
+}
+/* 
+#first {
+  grid-column: span 2;
+}
+#first img {
+  aspect-ratio: 2 / 1;
+} */
+
+.video {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.video::after {
+  content: 'play_arrow';
+  font-family: 'Material Icons';
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+}

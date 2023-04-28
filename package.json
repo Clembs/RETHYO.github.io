@@ -1,0 +1,19 @@
+{
+  "name": "RETHYO.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Clembs/RETHYO.github.io.git",
+  "author": "Clembs <clembs@clembs.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.4",
+    "nexe": "^4.0.0-rc.2"
+  },
+  "scripts": {
+    "gen": "node scripts/gen-project-files.mjs"
+  }
+}
