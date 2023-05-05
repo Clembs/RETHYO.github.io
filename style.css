@@ -71,7 +71,7 @@ video {
 }
 
 .video::after {
-  content: 'play_arrow';
+  content: '▶';
   font-family: 'Material Icons';
   font-size: 5rem;
   color: white;
